@@ -15,9 +15,9 @@ This lab simulates a realistic enterprise network infrastructure built in **VMwa
                             |
      +----------------------+----------------------+
      |                                             |
-[ DC01 - Windows Server 2022 ]           [ CLIENT01 - Windows 10/11 ]
-- IP: 192.168.10.10                      - IP: 192.168.10.20
-- Domain: CORP.LOCAL                     - Joined to CORP.LOCAL
+[ DC01 - Windows Server 2022 ]           [ CLIENT01 - Windows 10 ]
+- IP: 192.168.10.10                      - IP: 192.168.10.100
+- Domain: KIREKA.LOCAL                     - Joined to KIREKA.LOCAL
 - Roles: AD DS, DNS, DHCP
 ```
 
@@ -27,8 +27,8 @@ This lab simulates a realistic enterprise network infrastructure built in **VMwa
 
 - **Hypervisor:** VMware Workstation Pro
 - **Server OS:** Windows Server 2022
-- **Client OS:** Windows 10/11 Enterprise
-- **Services:** AD DS, DNS, DHCP, Group Policy (GPMC), PowerShell
+- **Client OS:** Windows 10 Enterprise
+- **Services:** AD DS, DNS, DHCP, Group Policy, PowerShell
 
 ---
 
@@ -36,7 +36,7 @@ This lab simulates a realistic enterprise network infrastructure built in **VMwa
 
 ### 1. Active Directory & Organizational Units (OUs)
 
-- Created a tiered OU structure following administrative best practices (`CORP.LOCAL/Corp_Users`, `Corp_Computers`, `Corp_Groups`, `Corp_Admins`).
+- Created a tiered OU structure following administrative best practices (`KIREKA.LOCAL/kireka_Users`, `kireka_computers`, `kireka_groups`, `kireka_admins`).
 - Populated users and security groups using PowerShell automation.
 
 ### 2. Group Policy Objects (GPOs)
@@ -51,11 +51,11 @@ This lab simulates a realistic enterprise network infrastructure built in **VMwa
 
 ---
 
-## Proof of Work (Screenshots)
+## Visual Illustrations
 
-### Active Directory Users & Computers (ADUC)
+### Active Directory Users & Computers
 
-![ADUC Structure](screenshots/aduc-structure.png)
+![ADUC Structure](screenshots/dhcp leases.png)
 
 ### Group Policy Enforcement (`gpresult /r`)
 

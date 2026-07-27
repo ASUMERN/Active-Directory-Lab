@@ -1,9 +1,11 @@
-# PowerShell Script for Bulk Active Directory User Creation
-
+# Define users with a guaranteed strong password and precise paths
 $users = @(
-    @{ FirstName="John"; LastName="Doe"; SamAccountName="jdoe"; OU="OU=IT,OU=Corp_Users,DC=CORP,DC=LOCAL" },
-    @{ FirstName="Jane"; LastName="Smith"; SamAccountName="jsmith"; OU="OU=Finance,OU=Corp_Users,DC=CORP,DC=LOCAL" }
+    @{ FirstName="John"; LastName="Legend"; SamAccountName="jlegend"; OU="OU=IT,OU=kireka_Users,OU=kireka_OUs,DC=KIREKA,DC=LOCAL" },
+    @{ FirstName="Janet"; LastName="Laula"; SamAccountName="jlaura"; OU="OU=Finance,OU=kireka_Users,OU=kireka_OUs,DC=KIREKA,DC=LOCAL" },
+    @{ FirstName="Daudi"; LastName="Mukasa"; SamAccountName="dmukasa"; OU="OU=HR,OU=kireka_Users,OU=kireka_OUs,DC=KIREKA,DC=LOCAL" }
 )
+
+$Password = ConvertTo-SecureString "asuman1.com" -AsPlainText -Force
 
 foreach ($user in $users) {
     New-ADUser `
@@ -11,8 +13,8 @@ foreach ($user in $users) {
         -Surname $user.LastName `
         -Name "$($user.FirstName) $($user.LastName)" `
         -SamAccountName $user.SamAccountName `
-        -UserPrincipalName "$($user.SamAccountName)@CORP.LOCAL" `
+        -UserPrincipalName "$($user.SamAccountName)@KIREKA.LOCAL" `
         -Path $user.OU `
         -Enabled $true `
-        -AccountPassword (ConvertTo-SecureString "P@ssw0rd2026!" -AsPlainText -Force)
+        -AccountPassword $Password
 }

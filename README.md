@@ -55,7 +55,7 @@ This lab simulates a realistic enterprise network infrastructure built in **VMwa
 
 ### Active Directory Users & Computers
 
-![ADUC Structure](screenshots/dhcp leases.png)
+![ADUC Structure](screenshots/dhcp-leases.png)
 
 ### Group Policy Enforcement (`gpresult /r`)
 

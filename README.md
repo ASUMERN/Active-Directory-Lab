@@ -284,7 +284,7 @@ Successfully joined all five client computers to the domain.
 
 ## Domain-Joined Client
 
-![Domain Join](screenshots/domain-joined.png)
+![Domain Join](screenshots/domain-join-success.png)
 
 ---
 

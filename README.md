@@ -214,6 +214,168 @@ Automation significantly reduces repetitive administrative tasks and improves de
 
 ---
 
+# Shared Folder Administration
+
+Configured centralized file sharing to simulate departmental resource access within an enterprise environment.
+
+## Shared Resources
+
+| Shared Folder | Purpose                                   | Access Group  |
+| ------------- | ----------------------------------------- | ------------- |
+| IT            | IT documentation and administrative tools | IT_Staff      |
+| HR            | Employee records and HR documents         | HR_Users      |
+| Finance       | Financial reports and budgets             | Finance_Users |
+| Public        | Company-wide shared resources             | Domain Users  |
+
+Each shared folder was configured with both **Share Permissions** and **NTFS Permissions** to ensure users only access resources appropriate to their department.
+
+### Permission Strategy
+
+- Domain Admins — Full Control
+- Department Security Group — Modify
+- Domain Users — Read (Public Share Only)
+- Unauthorized Users — No Access
+
+This demonstrates the implementation of the **Principle of Least Privilege (PoLP)** by restricting access based on security group membership.
+
+---
+
+# Common Active Directory Administrative Tasks
+
+Performed routine administrative operations commonly handled by IT Support Engineers and Systems Administrators.
+
+## User Account Management
+
+Successfully performed:
+
+- Created new user accounts
+- Disabled inactive accounts
+- Enabled previously disabled accounts
+- Reset user passwords
+- Forced password changes at next logon
+- Unlocked locked user accounts
+- Deleted obsolete user accounts
+
+---
+
+## Group Administration
+
+Managed Active Directory security groups by:
+
+- Creating Security Groups
+- Adding users to groups
+- Removing users from groups
+- Managing group memberships
+- Using groups to control access to shared folders
+
+---
+
+## Computer Administration
+
+Managed domain-joined workstations by:
+
+- Joining Windows 10 computers to the domain
+- Verifying computer objects in Active Directory
+- Moving computer accounts into Organizational Units
+- Renaming computer objects
+- Removing obsolete computer accounts
+
+---
+
+## Organizational Unit Administration
+
+Performed routine Active Directory organization tasks including:
+
+- Creating Organizational Units
+- Moving users between OUs
+- Delegating Group Policy through OUs
+- Organizing users and computers according to departmental structure
+
+---
+
+## Account Security
+
+Implemented standard account security procedures:
+
+- Password resets
+- Account unlocks
+- Account disabling
+- Password complexity enforcement
+- Account lockout policy verification
+
+---
+
+## Administrative Tools Used
+
+- Active Directory Users and Computers (ADUC)
+- Group Policy Management Console (GPMC)
+- DNS Manager
+- DHCP Manager
+- Computer Management
+- PowerShell
+
+---
+
+# Administrative Task Demonstrations
+
+## Creating a New User
+
+![Create User](screenshots/create-user.png)
+
+---
+
+## Password Reset
+
+![Password Reset](screenshots/password-reset.png)
+
+---
+
+## Unlocking a User Account
+
+![Unlock User](screenshots/unlock-user.png)
+
+---
+
+## Adding User to Security Group
+
+![Security Group](screenshots/add-group.png)
+
+---
+
+## Shared Folder Permissions
+
+![Shared Folder](screenshots/shared-folder.png)
+
+---
+
+## NTFS Permissions
+
+![NTFS Permissions](screenshots/ntfs-permissions.png)
+
+---
+
+## Active Directory Users and Computers
+
+![ADUC](screenshots/aduc.png)
+
+---
+
+# Typical IT Support Scenarios
+
+The following scenarios were successfully completed within the lab environment.
+
+| Scenario                     | Administrative Action                                     | Result                          |
+| ---------------------------- | --------------------------------------------------------- | ------------------------------- |
+| User forgot password         | Reset password and required password change at next logon | User regained access            |
+| User account locked          | Unlocked account using ADUC                               | Account restored                |
+| New employee onboarding      | Created user, assigned groups, configured home folder     | User provisioned                |
+| Employee department transfer | Updated group memberships and OU placement                | Permissions updated             |
+| Employee termination         | Disabled account and removed group memberships            | Access revoked                  |
+| New workstation deployment   | Joined Windows 10 PC to domain                            | Centralized management enabled  |
+| Department file access       | Assigned NTFS permissions through security groups         | Secure file sharing implemented |
+
+---
+
 # Security Best Practices
 
 Applied enterprise administration principles throughout the deployment.

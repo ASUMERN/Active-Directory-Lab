@@ -356,7 +356,7 @@ Implemented standard account security procedures:
 
 ## Active Directory Users and Computers
 
-![ADUC](screenshots/aduc.png)
+![ADUC](screenshots/ad-users.png)
 
 ---
 
